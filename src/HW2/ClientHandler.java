@@ -24,8 +24,8 @@ public class ClientHandler implements Runnable{
                 ArrayList<Integer> arrayList = (ArrayList<Integer>) objectInputStream.readObject();
 //                String string = input.readLine();
 //                String n = input.readLine();
-                printWriter.println("The max value of the array is: " + Server2.findMax(arrayList) +
-                        " and The min value of the array is: " + Server2.findMin(arrayList));
+                printWriter.println("The max value of the array is: " + ServerMultiThread.findMax(arrayList) +
+                        " and The min value of the array is: " + ServerMultiThread.findMin(arrayList));
 //                printWriter.println(string);
             }
         } catch (IOException | ClassNotFoundException e) {
