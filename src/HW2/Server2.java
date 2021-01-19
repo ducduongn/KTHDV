@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Server {
+public class Server2 {
     private static int PORT_NUMBER = 8080;
 
     private static ArrayList <ClientHandler> clients = new ArrayList<>();

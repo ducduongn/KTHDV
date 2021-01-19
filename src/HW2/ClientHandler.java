@@ -2,7 +2,6 @@ package HW2;
 
 import java.io.*;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.ArrayList;
 
 public class ClientHandler implements Runnable{
@@ -23,12 +22,13 @@ public class ClientHandler implements Runnable{
         try {
             while (true) {
                 ArrayList<Integer> arrayList = (ArrayList<Integer>) objectInputStream.readObject();
+//                String string = input.readLine();
 //                String n = input.readLine();
-                printWriter.println("The max value of the array is: " + Server.findMax(arrayList) +
-                        " and The min value of the array is: " + Server.findMin(arrayList));
-//                printWriter.println(n);
+                printWriter.println("The max value of the array is: " + Server2.findMax(arrayList) +
+                        " and The min value of the array is: " + Server2.findMin(arrayList));
+//                printWriter.println(string);
             }
-        } catch (ClassNotFoundException | IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
             try {
